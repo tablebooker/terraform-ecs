@@ -4,7 +4,7 @@ resource "aws_cloudwatch_metric_alarm" "ecs_service_scale_up_alarm" {
   evaluation_periods  = var.evaluation_periods
   metric_name         = "CPUUtilization"
   namespace           = "AWS/ECS"
-  period              = var.period_down
+  period              = var.period_up
   statistic           = var.statistic
   threshold           = var.threshold_up
   datapoints_to_alarm = var.datapoints_to_alarm_up
